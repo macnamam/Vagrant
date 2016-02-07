@@ -44,7 +44,7 @@ Vagrant.configure(2) do |config|
   # the path on the guest to mount the folder. And the optional third
   # argument is a set of non-required options.
     # need absolute paths, so the answer here is to leverage the environment variable
-  config.vm.synced_folder ENV['HOME']+"/Dropbox", "/home/vagrant/Dropbox"
+  # config.vm.synced_folder ENV['HOME']+"/Dropbox", "/home/vagrant/Dropbox"
   config.vm.synced_folder ENV['HOME']+"/Google Drive", "/home/vagrant/GoogleDrive"
 
   # Provider-specific configuration so you can fine-tune various
@@ -56,9 +56,9 @@ Vagrant.configure(2) do |config|
   #   vb.gui = true
   #
   #   # Customize the amount of memory on the VM:
-     vb.memory = "8192"
+     vb.memory = "2048"
       # set the number of cpus
-     vb.cpus = "2"
+     vb.cpus = "1"
       # Enable usb (for opencv)
      vb.customize ["modifyvm", :id, "--usb", "on"]
      vb.customize ["modifyvm", :id, "--usbehci", "on"]
